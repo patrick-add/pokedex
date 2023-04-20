@@ -1,6 +1,6 @@
 const pokemonsList = document.getElementById("pokemonsList");
 const carregarMais = document.getElementById("carregarMais");
-
+const maximoDePokemon = 151;
 const limit = 10;
 let offset = 0;
 
@@ -30,7 +30,18 @@ const carregandoMaisPokemons = (offset, limit) => {
   });
 };
 
+carregandoMaisPokemons(offset, limit);
+
 carregarMais.addEventListener("click", () => {
-  carregandoMaisPokemons(offset, limit);
   offset += limit;
+  const total = offset + limit;
+
+  if (total >= maximoDePokemon) {
+    const novoLimite = maximoDePokemon - offset;
+    carregandoMaisPokemons(offset, novoLimite);
+
+    carregarMais.parentElement.removeChild(carregarMais);
+  } else {
+    carregandoMaisPokemons(offset, limit);
+  }
 });

@@ -1,3 +1,5 @@
+// const pokeApiDet = require("./mainDetalhado");
+
 const pokemonsList = document.getElementById("pokemonsList");
 const carregarMais = document.getElementById("carregarMais");
 const maximoDePokemon = 151;
@@ -6,9 +8,11 @@ let offset = 0;
 
 const convertPokemonToLi = (pokemon) => {
   return `
-    <li class="pokemon ${pokemon.tipoPrincipal}">
+    <li class="pokemon ${pokemon.tipoPrincipal} " >
                 <span class="number">#${pokemon.numero}</span>
-                <span class="name">${pokemon.nome}</span>
+                <span class="name" onclick="showPokemonDetails('${
+                  pokemon.nome
+                }')">${pokemon.nome}</span>
 
                 <div class="detail">
                     <ol class="types">
@@ -16,7 +20,7 @@ const convertPokemonToLi = (pokemon) => {
                       .map((tipo) => `<li class="type ${tipo}">${tipo}</li>`)
                       .join("")}
                     </ol>
-                    <img src="${pokemon.foto}" alt="${pokemon.nome}">
+                    <img src="${pokemon.foto}" alt="${pokemon.nome}" id="pok">
                 </div>
                 
             </li>
@@ -45,3 +49,10 @@ carregarMais.addEventListener("click", () => {
     carregandoMaisPokemons(offset, limit);
   }
 });
+
+const showPokemonDetails = (pokemonName) => {
+  // Redirecionar para a página de detalhes do Pokémon
+  window.location.href = `html/pokemonDetalhado.html?pokemon=${encodeURIComponent(
+    pokemonName
+  )}`;
+};

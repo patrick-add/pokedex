@@ -1,0 +1,181 @@
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemon .number {
+    margin: 1rem;
+    color: black;
+    opacity: .3;
+    text-align: right;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon .name {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: .25rem;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh; 
+}
+
+.info {
+    font-size: 15px;
+}
+
+li {
+    margin: 0.5rem;
+}
+
+.dados {
+    background-color: #fff;
+    margin: 0rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 60vh;
+    margin-top: 8rem;
+}
+
+.info {
+    color: rgba(0, 0, 0, 0.5);
+    width: 40%;
+}
+
+.pokemon .detail .types {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.pokemon .detail .types .type{
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem 0;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+}
+div.detail {
+    position: relative;
+    left: 2vh;
+    margin-top: 1rem;
+}
+
+h3 {
+    display: inline-block;
+    width: 40%;
+}
+
+.habilidades {
+    list-style: none;
+    width: auto;
+    display: inline-grid;
+    padding: 0;
+}
+
+.habilidades li {
+    display: inline-block;
+}
+
+.dado {
+    font-size: 16px;
+}
+
+.content {
+    width: 100vw;
+    height: 100vw;
+    padding: 0rem;
+    background-color: #fff;
+}
